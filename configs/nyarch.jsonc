@@ -1,0 +1,109 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+  "logo":{
+    "type":"kitty",
+    "source":"~/.customization/imgs/logos/nyarch.png",
+    "height":14,
+    "width":32,
+    "padding":{
+      "top":1,
+      "left":1,
+      "right":2
+    }
+  },
+  "modules": [
+    "break",
+    "break",
+    {
+      "type":"os",
+      "key":"  \udb82\udcc7     OS          ",
+      "keyColor":"cyan"
+    },
+    {
+      "type":"kernel",
+      "key":"  \u251c\u2574 \ue712  Kernel      ",
+      "keyColor":"cyan"
+    },
+    {
+      "type":"uptime",
+      "key":"  \u2570\u2574 \udb85\udc42  Uptime      ",
+      "keyColor":"cyan"
+    },
+    "break",
+    {
+      "type":"shell",
+      "key":"  \uf2d2     Shell       ",
+      "keyColor":"yellow"
+    },
+    {
+      "type":"de",
+      "key":"  \u251c\u2574 \udb82\ude07  DE          ",
+      "keyColor":"yellow"
+    },
+    {
+      "type":"wm",
+      "key":"  \u251c\u2574 \uf2d2  WM          ",
+      "keyColor":"yellow"
+    },
+    {
+      "type":"terminal",
+      "key":"  \u2570\u2574 \uf120  Terminal    ",
+      "keyColor":"yellow"
+    },
+    "break",
+    {
+      "type":"host",
+      "key":"  \udb80\uddc5     Host        ",
+      "keyColor":"green"
+    },
+    {
+      "type":"chassis",
+      "key":"  \u251c\u2574 \uf109  Chassis     ",
+      "keyColor":"green"
+    },
+    {
+      "type":"cpu",
+      "key":"  \u251c\u2574 \uf4bc  CPU         ",
+      "keyColor":"green"
+    },
+    {
+      "type":"gpu",
+      "key":"  \u251c\u2574 \uf4bc  GPU         ",
+      "keyColor":"green"
+    },
+    {
+      "type":"display",
+      "key":"  \u251c\u2574 \udb80\udf79  Display     ",
+      "keyColor":"green"
+    },
+    {
+      "type":"memory",
+      "key":"  \u251c\u2574 \uefc5  Memory      ",
+      "keyColor":"green"
+    },
+    {
+      "type":"swap",
+      "key":"  \u251c\u2574 \udb81\udce1  Swap        ",
+      "keyColor":"green"
+    },
+    {
+      "type":"disk",
+      "key":"  \u2570\u2574 \udb80\udeca  Disk        ",
+      "keyColor":"green"
+    },
+    "break",
+    {
+      "type":"Media",
+      "key":"  \uf2eb     Media       ",
+      "keyColor":"red"
+    },
+    {
+      "type":"Player",
+      "key":"  \u2570\u2574 \uf144  Player      ",
+      "keyColor":"red"
+    },
+    "break",
+    "colors",
+    "break"
+  ]
+}
