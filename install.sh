@@ -41,8 +41,19 @@ case $A in
         echo "If you wanna see the image, ensure you have imagemagick and use kitty or any other kitty-based terminal (e.g. Konsole)"
         ;;
 
+    2)
+        echo "Copying minimal config"
+        cp "./configs/minimal.jsonc" "~/.config/fastfetch/"
+        if [ -e "~/.config/fastfetch/config.jsonc" ]; then
+            [ $C == "y" ] && cp "~/.config/fastfetch/config.jsonc" "~/.config/fastfetch/config.jsonc.old"
+        fi
+        [ $B == "y" ] && mv "~/.config/fastfetch/minimal.jsonc" "~/.config/fastfetch/config.jsonc"
+        ;;
+
     *)
         echo "Invalid config choice, quitting"
         exit
         ;;
 esac
+
+echo "Done!"
