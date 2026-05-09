@@ -17,7 +17,6 @@ read B
 [ "$B" = "Y" ] || [ "$B" = "" ] && B="y"
 
 if [ "$B" = "y" ]; then
-    echo
     echo -en "Do you want to keep the old config? (y/n) "
     read C
 fi
@@ -33,42 +32,24 @@ fi
 
 case $A in
     1)  
-        echo "Copying Nyarch config"
-        cp configs/nyarch.jsonc ~/.config/fastfetch/nyarch.jsonc
-        [ -e "~/.config/fastfetch/config.jsonc" ] && \
-            [ $C = "y" ] && cp ~/.config/fastfetch/config.jsonc ~/.config/fastfetch/config.jsonc.old
-        [ "$B" = "y" ] && mv ~/.config/fastfetch/nyarch.jsonc ~/.config/fastfetch/config.jsonc
-        
-        [ "$D" = "y" ] && \ 
-            echo "Copying image" && \
-            cp ./images/nyarch.png ~/.config/fastfetch/nyarch.png
-        
-        echo "If you wanna see the image, ensure you have imagemagick and use kitty or any other kitty-based terminal (e.g. Konsole)"
+        cfg="Nyarch"
+        A="nyarch.jsonc"
+        img="nyarch.png"
         ;;
 
     2)
-        echo "Copying Minimal config"
-        cp configs/minimal.jsonc ~/.config/fastfetch/minimal.jsonc
-        [ -e "~/.config/fastfetch/config.jsonc" ] && \
-            [ $C = "y" ] && cp ~/.config/fastfetch/config.jsonc ~/.config/fastfetch/config.jsonc.old
-        [ $B = "y" ] && mv ~/.config/fastfetch/minimal.jsonc ~/.config/fastfetch/config.jsonc
+        cfg="Minimal"
+        A="minimal.jsonc"
         ;;
 
     3)
-        echo "Copying Windows 11 config"
-        cp configs/windows11.jsonc ~/.config/fastfetch/windows11.jsonc
-        [ -e "~/.config/fastfetch/config.jsonc" ] && \
-            [ $C = "y" ] && cp ~/.config/fastfetch/config.jsonc ~/.config/fastfetch/config.jsonc.old
-        [ $B = "y" ] && mv ~/.config/fastfetch/windows11.jsonc ~/.config/fastfetch/config.jsonc
+        cfg="Windows 11"
+        A="windows11.jsonc"
         ;;
 
     4)
-        echo "Copying Tux config"
-        cp configs/tux.jsonc ~/.config/fastfetch/tux.jsonc
-        [ -e "~/.config/fastfetch/config.jsonc" ] && \
-            [ $C = "y" ] && cp ~/.config/fastfetch/config.jsonc ~/.config/fastfetch/config.jsonc.old
-
-        [ $B = "y" ] && mv ~/.config/fastfetch/tux.jsonc ~/.config/fastfetch/config.jsonc
+        cfg="Tux"
+        A="tux.jsonc"
         ;;
 
     *)
@@ -76,5 +57,17 @@ case $A in
         exit
         ;;
 esac
+
+echo "Copying $cfg config"
+cp configs/$A ~/.config/fastfetch/$A
+[ -e "~/.config/fastfetch/config.jsonc" ] && \
+    [ $C = "y" ] && mv ~/.config/fastfetch/config.jsonc ~/.config/fastfetch/config.jsonc.old
+
+[ "$B" = "y" ] && mv ~/.config/fastfetch/$A ~/.config/fastfetch/config.jsonc
+
+[ "$D" = "y" ] && \
+    echo "Copying image" && \
+    cp images/$img ~/.config/fastfetch/$img && \
+    echo "If you wanna see the image, ensure you have imagemagick and use kitty or any other kitty-based terminal (e.g. Konsole)"
 
 echo "Done!"
