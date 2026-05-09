@@ -1,0 +1,44 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+  "logo":{
+    "source":"Windows 11",
+    "padding": { "top": 1 }
+  },
+  "modules": [
+    "break", "separator",
+    {
+      "type":"os",
+      "key":"OS       "
+    },
+    {
+      "type":"uptime",
+      "key":"Uptime   "
+    },
+    {
+      "type":"Media",
+      "key":"Media    "
+    },
+    "separator",
+    {
+      "type":"cpu",
+      "key":"CPU      "
+    },
+    {
+      "type":"gpu",
+      "key":"GPU      "
+    },
+    {
+      "type":"display",
+      "key":"Display  "
+    },
+    {
+      "type":"memory",
+      "key":"Memory   "
+    },
+    {
+      "type":"disk",
+      "key":"Disk     "
+    },
+    "separator", "colors", "separator", "break"
+  ]
+}

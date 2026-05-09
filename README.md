@@ -10,6 +10,9 @@ my fastfetch configs you can steal or borrow freely
 ### minimal
 <img src="screenshots/minimal.png" width="450px">
 
+### windows 11
+<img src="screenshots/windows11.png" width="450px">
+
 <br><hr><br>
 
 # how to install
