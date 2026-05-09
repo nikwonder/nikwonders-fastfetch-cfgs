@@ -1,0 +1,61 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+  "logo":{
+    "source":"Linux",
+    "padding": { "top": 3 }
+  },
+  "modules": [
+    "break", "title", "break",
+    {
+      "type":"os",
+      "key":"> \udb80\udf79  os         "
+    },
+    {
+      "type":"kernel",
+      "key":"> \udb80\udf3d  kernel     "
+    },
+    {
+      "type":"uptime",
+      "key":"> \udb85\udc41  uptime     "
+    },
+    {
+      "type":"Media",
+      "key":"> \udb81\udc0c  media      "
+    },
+    "break",
+    {
+      "type":"terminal",
+      "key":"> \ue795  terminal   "
+    },
+    {
+      "type":"shell",
+      "key":"> \udb84\udd04  shell      "
+    },
+    {
+      "type":"de",
+      "key":"> \uebf2  de         "
+    },
+    {
+      "type":"wm",
+      "key":"> \udb84\udcac  wm         "
+    },
+    "break",
+    {
+      "type":"cpu",
+      "key":"> \uf4bc  cpu        "
+    },
+    {
+      "type":"gpu",
+      "key":"> \uf4bc  gpu        "
+    },
+    {
+      "type":"memory",
+      "key":"> \uefc5  memory     "
+    },
+    {
+      "type":"disk",
+      "key":"> \uf0a0  disk       "
+    },
+    "break"
+  ]
+}

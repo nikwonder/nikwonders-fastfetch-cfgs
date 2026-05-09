@@ -5,6 +5,7 @@ echo
 echo "1. Nyarch"
 echo "2. Minimal"
 echo "3. Windows 11"
+echo "4. Tux"
 echo
 echo -en "Choose the config you wanna install (1/2/3/4/5...) "
 read A
@@ -34,11 +35,10 @@ case $A in
     1)  
         echo "Copying Nyarch config"
         cp configs/nyarch.jsonc ~/.config/fastfetch/nyarch.jsonc
-        if [ -e "~/.config/fastfetch/config.jsonc" ]; then
-            [ "$C" = "y" ] && cp ~/.config/fastfetch/config.jsonc ~/.config/fastfetch/config.jsonc.old
-        fi
+        [ -e "~/.config/fastfetch/config.jsonc" ] && \
+            [ $C = "y" ] && cp ~/.config/fastfetch/config.jsonc ~/.config/fastfetch/config.jsonc.old
         [ "$B" = "y" ] && mv ~/.config/fastfetch/nyarch.jsonc ~/.config/fastfetch/config.jsonc
-
+        
         [ "$D" = "y" ] && \ 
             echo "Copying image" && \
             cp ./images/nyarch.png ~/.config/fastfetch/nyarch.png
@@ -49,19 +49,26 @@ case $A in
     2)
         echo "Copying Minimal config"
         cp configs/minimal.jsonc ~/.config/fastfetch/minimal.jsonc
-        if [ -e "~/.config/fastfetch/config.jsonc" ]; then
+        [ -e "~/.config/fastfetch/config.jsonc" ] && \
             [ $C = "y" ] && cp ~/.config/fastfetch/config.jsonc ~/.config/fastfetch/config.jsonc.old
-        fi
         [ $B = "y" ] && mv ~/.config/fastfetch/minimal.jsonc ~/.config/fastfetch/config.jsonc
         ;;
 
     3)
         echo "Copying Windows 11 config"
         cp configs/windows11.jsonc ~/.config/fastfetch/windows11.jsonc
-        if [ -e "~/.config/fastfetch/config.jsonc" ]; then
+        [ -e "~/.config/fastfetch/config.jsonc" ] && \
             [ $C = "y" ] && cp ~/.config/fastfetch/config.jsonc ~/.config/fastfetch/config.jsonc.old
-        fi
         [ $B = "y" ] && mv ~/.config/fastfetch/windows11.jsonc ~/.config/fastfetch/config.jsonc
+        ;;
+
+    4)
+        echo "Copying Tux config"
+        cp configs/tux.jsonc ~/.config/fastfetch/tux.jsonc
+        [ -e "~/.config/fastfetch/config.jsonc" ] && \
+            [ $C = "y" ] && cp ~/.config/fastfetch/config.jsonc ~/.config/fastfetch/config.jsonc.old
+
+        [ $B = "y" ] && mv ~/.config/fastfetch/tux.jsonc ~/.config/fastfetch/config.jsonc
         ;;
 
     *)
