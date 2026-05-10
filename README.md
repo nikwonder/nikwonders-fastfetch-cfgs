@@ -19,9 +19,9 @@ My fastfetch configs that you can steal or borrow freely
 <br><hr><br>
 
 # How to install
-You can either set the theme manually, or clone this repo and use the `install.sh` given
+You can either set the theme manually, or clone this repo and use the `install.sh` given (linux only)
 
-## Automatic
+## Automatic (linux only)
 1. Clone the repo:
 ```
 git clone https://github.com/nikwonder/nikwonders-fastfetch-cfgs.git
