@@ -39,7 +39,7 @@ cd nikwonders-fastfetch-cfgs
 
 ## Manually
 1.  Download the config you want
-2.  Copy it into the `~/.config/fastfetch/` folder (or don't)
+2.  Copy it into the `~/.config/fastfetch/` folder (`ProgramData` on your system drive if you're on Windows)
 3.  If you want to use it permanently, rename the file to `config.jsonc`<br>
     If you don't, use `fastfetch -c [path to config here]` to use the config once
 4.  Done!
