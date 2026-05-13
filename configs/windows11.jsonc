@@ -5,7 +5,7 @@
     "padding": { "top": 1 }
   },
   "modules": [
-    "break", "separator",
+    "break", "title", "separator",
     {
       "type":"os",
       "key":"OS       "
@@ -19,6 +19,14 @@
       "key":"Media    "
     },
     "separator",
+    {
+      "type":"host",
+      "key":"Host     "
+    },
+    {
+      "type":"chassis",
+      "key":"Chassis  "
+    },
     {
       "type":"cpu",
       "key":"CPU      "
