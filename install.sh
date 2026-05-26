@@ -28,8 +28,6 @@ if [ $A -eq 1 ]; then
     [ "$D" = "Y" ] || [ "$D" = "" ] && D="y" 
 fi
 
-[ -d "~/.config/fastfetch" ] && mkdir "~/.config/fastfetch"
-
 case $A in
     1)  
         cfg="Nyarch"
@@ -57,6 +55,8 @@ case $A in
         exit
         ;;
 esac
+
+[ -d "~/.config/fastfetch" ] || mkdir "~/.config/fastfetch"
 
 echo "Copying $cfg config"
 cp configs/$A ~/.config/fastfetch/$A
