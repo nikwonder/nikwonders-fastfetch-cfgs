@@ -1,22 +1,19 @@
 # nikwonder's fastfetch configs
-My fastfetch configs that you can steal or borrow freely
-
-<br><hr><br>
+my fastfetch configs that you can steal or borrow freely<br>
+idk why i made this
 
 # Screenshots
-### Nyarch
+**Nyarch**
 <img src="screenshots/nyarch.png" width="450px">
 
-### Minimal
+**Minimal**
 <img src="screenshots/minimal.png" width="450px">
 
-### Windows 11
+**Windows 11**
 <img src="screenshots/windows11.png" width="450px">
 
-### Tux
+**Tux**
 <img src="screenshots/tux.png" width="450px">
-
-<br><hr><br>
 
 # How to install
 You can either set the theme manually, or clone this repo and use the `install.sh` given (linux only)
